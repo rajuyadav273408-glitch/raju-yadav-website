@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raju Yadav | Personal Website</title>
+    <meta name="description" content="Welcome to the personal website of Raju Yadav from Kotiya Nayak, Gola, Gorakhpur, Uttar Pradesh. Explore his introduction, education, photo gallery and social media profiles.">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Basic Page Design */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #123c69, #2563a6);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 25px 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+        }
+
+        h2 {
+            color: #123c69;
+            font-size: 28px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            color: #2563a6;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+        }
+
+        /* Introduction */
+        .introduction {
+            border-top: 5px solid #2563a6;
+        }
+
+        .introduction p {
+            text-align: justify;
+            margin: 12px 0;
+        }
+
+        .introduction .welcome {
+            color: #2563a6;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .introduction .closing {
+            text-align: center;
+            font-weight: bold;
+            color: #123c69;
+            margin-top: 20px;
+        }
+
+        /* About Me */
+        .about-info {
+            text-align: left;
+        }
+
+        .about-info p {
+            margin: 8px 0;
+        }
+
+        /* Education */
+        .education-item {
+            border-left: 4px solid #2563a6;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item p {
+            margin: 5px 0;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .photo-gallery img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background-color: #f0f4f8;
+            border-radius: 10px;
+            transition: transform 0.25s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Social Media */
+        .social-description {
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 22px;
+            color: white;
+            background-color: #123c69;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.25s, transform 0.25s;
+        }
+
+        .social-links a:hover {
+            background-color: #2563a6;
+            transform: translateY(-3px);
+        }
+
+        .social-links i {
+            font-size: 20px;
+        }
+
+        /* Individual Social Icon Colors */
+        .social-links .instagram {
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+        }
+
+        .social-links .facebook {
+            background-color: #1877f2;
+        }
+
+        .social-links .youtube {
+            background-color: #ff0000;
+        }
+
+        .social-links .instagram:hover,
+        .social-links .facebook:hover,
+        .social-links .youtube:hover {
+            filter: brightness(0.90);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #123c69;
+            color: black;
+            text-align: center;
+            padding: 18px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Mobile-Friendly Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .photo-gallery img {
+                height: 180px;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .introduction p {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .photo-gallery img {
+                height: 140px;
+            }
+
+            .social-links a {
+                padding: 11px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Raju Yadav</h1>
+        <p>Welcome to My Personal Website</p>
+    </header>
+
+    <main>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="introduction">
+            <h2>My Introduction</h2>
+
+
+            <p>
+                My name is <strong>Raju Yadav</strong>, and I come from
+                a village called <strong>Kotiya Nayak</strong>, located
+                in Gola Block of Gorakhpur District, Uttar Pradesh, India.
+                I was born on 20 August 1998 and belong to a humble
+                middle-class family. My roots, family values, and life
+                experiences have played an important role in shaping
+                the person I am today.
+            </p>
+
+            <p>
+                One of the most respected figures in my family was my
+                late grandfather, <strong>late Ramswaroop Yadav</strong>,
+                who was a wrestler. His legacy remains a meaningful part
+                of my family history and inspires me to value strength,
+                dedication, and perseverance.
+            </p>
+
+            <p>
+                My educational journey began in my home village, where
+                I completed my primary education. I later continued my
+                studies from Class 9 to Class 12 at a college outside
+                my village. With a desire to pursue higher education
+                and build a better future, I moved to Gorakhpur,
+                leaving behind the comfort of my hometown to explore
+                new opportunities.
+            </p>
+
+            <p>
+                My journey eventually led me to pursue postgraduate
+                studies through institutions in Gorakhpur and
+                Farrukhabad, Uttar Pradesh, where I completed my
+                master's degree.
+            </p>
+
+            <p>
+                Coming from a middle-class background has taught me
+                the importance of hard work, patience, and continuous
+                learning. I believe that our beginnings do not define
+                our limits; rather, our dedication, decisions, and
+                determination shape our future.
+            </p>
+
+            <p>
+                Through this website, I want to share my personal
+                journey, educational background, memories, photographs,
+                family history, and future experiences. This website
+                is a small effort to preserve my story and keep adding
+                new chapters as life unfolds.
+            </p>
+
+            <p class="closing">
+                Thank you for visiting my website and becoming a part
+                of my journey!
+            </p>
+        </section>
+
+        <!-- About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <div class="about-info">
+                <p><strong>Full Name:</strong> Raju Yadav</p>
+                <p><strong>Date of Birth:</strong> 20 August 1998</p>
+                <p><strong>Father:</strong> Diwakar Yadav</p>
+                <p><strong>Mother:</strong> Jiyaksha Devi</p>
+                <p><strong>Grandfather:</strong> Late Ramswaroop Yadav</p>
+                <p><strong>Address:</strong> Kotiya Nayak, Gola,
+                    Gorakhpur, Uttar Pradesh, India - 273408</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>My Education</h2>
+
+            <div class="education-item">
+                <h3>Master of Computer Applications (MCA)</h3>
+                <p><strong>University:</strong> Major SD Singh University, Farrukhabad (UP)</p>
+                <p><strong>Passing Year:</strong> 2026</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p><strong>University:</strong> DDU</p>
+                <p><strong>College:</strong> ITM Gida, Gorakhpur (UP)</p>
+                <p><strong>Year of Passing:</strong> 2022</p>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section id="gallery">
+            <h2>My Photo Gallery</h2>
+
+            <div class="photo-gallery">
+                <img src="images/photo1.jpeg" alt="Raju's photo 1">
+                <img src="images/photo2.jpeg" alt="Raju's photo 2">
+                <img src="images/photo3.jpeg" alt="Raju's photo 3">
+                <img src="images/photo4.jpeg" alt="Raju's photo 4">
+                <img src="images/photo5.jpeg" alt="Raju's photo 5">
+                <img src="images/photo6.jpeg" alt="Raju's photo 6">
+                <img src="images/photo7.jpeg" alt="Raju's photo 7">
+                <img src="images/photo8.jpeg" alt="Raju's photo 8">
+                <img src="images/photo9.jpeg" alt="Raju's photo 9">
+                <img src="images/photo10.jpeg" alt="Raju's photo 10">
+                <img src="images/photo11.jpeg" alt="Raju's photo 11">
+                <img src="images/photo12.jpeg" alt="Raju's photo 12">
+                <img src="images/photo13.jpeg" alt="Raju's photo 13">
+                <img src="images/photo14.jpeg" alt="Raju's photo 14">
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social-media">
+            <h2>Connect With Me</h2>
+
+            <p class="social-description">
+                Follow me on my social media platforms.
+            </p>
+
+            <div class="social-links">
+
+                <a class="instagram"
+                   href="https://instagram.com/raju_yadaav9400"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a class="facebook"
+                   href="https://www.facebook.com/share/1CVxA3Q2sk/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+
+                <a class="youtube"
+                   href="https://youtube.com/@rajuyadav9400-q8x"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Raju Yadav | My Personal Website</p>
+    </footer>
+
+</body>
+</html>
